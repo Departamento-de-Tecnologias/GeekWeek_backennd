@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-class votation(models.Model):
+class Votation(models.Model):
     """Votation mode"""
-    idip = models.GenericIPAddressField()
-    voteid=models.IntegerField()
+    idip = models.GenericIPAddressField(unique=True)
+    voteid=models.IntegerField(blank=False)
     
